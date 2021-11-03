@@ -3,7 +3,7 @@ Data Management Final Project - Fall 2021
 ### Group 8 Members
 - Jad Eletry       - 100745226
 - Abbas Rizvi      - 100746798
-- Hamza Asif       - 100767042
+- MohammadHamza Asif       - 100767042
 - Shahzabe Mahmood - 100745894
 - Daniel LoPresti  - 100748818
 
