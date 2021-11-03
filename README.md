@@ -1,5 +1,5 @@
-# Movie-Knight - Data Management Final Project
-Movie Databse Application
+# MovieKnight
+Data Management Final Project - Fall 2021
 ### Group 8 Members
 - Jad Eletry       - 100745226
 - Abbas Rizvi      - 100746798
