@@ -1,0 +1,190 @@
+CREATE SCHEMA IF NOT EXISTS `moviek` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
+USE `moviek` ;
+
+-- -----------------------------------------------------
+-- Table `moviek`.`actor`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `moviek`.`actor` (
+  `ActorID` INT NOT NULL,
+  `Fname` VARCHAR(45) NULL DEFAULT NULL,
+  `Lname` VARCHAR(45) NULL DEFAULT NULL,
+  `Sex` VARCHAR(45) NULL DEFAULT NULL,
+  `Age` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`ActorID`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `moviek`.`director`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `moviek`.`director` (
+  `DirectorID` INT NOT NULL,
+  `Fname` VARCHAR(45) NULL DEFAULT NULL,
+  `Lname` VARCHAR(45) NULL DEFAULT NULL,
+  `Sex` VARCHAR(45) NULL DEFAULT NULL,
+  `Age` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`DirectorID`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `moviek`.`genre`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `moviek`.`genre` (
+  `GName` VARCHAR(45) NOT NULL,
+  `genre` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`GName`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `moviek`.`rating`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `moviek`.`rating` (
+  `RateNo` INT NOT NULL,
+  `Rating` INT NULL DEFAULT NULL,
+  `RateLetter` VARCHAR(45) NULL DEFAULT NULL,
+  `MovieID` INT NULL DEFAULT NULL,
+  PRIMARY KEY (`RateNo`))
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+-- -----------------------------------------------------
+-- Schema moviek
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema moviek
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `moviek` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
+USE `moviek` ;
+
+-- -----------------------------------------------------
+-- Table `moviek`.`actor`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `moviek`.`actor` (
+  `ActorID` INT NOT NULL,
+  `Fname` VARCHAR(45) NULL DEFAULT NULL,
+  `Lname` VARCHAR(45) NULL DEFAULT NULL,
+  `Sex` VARCHAR(45) NULL DEFAULT NULL,
+  `Age` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`ActorID`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `moviek`.`director`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `moviek`.`director` (
+  `DirectorID` INT NOT NULL,
+  `Fname` VARCHAR(45) NULL DEFAULT NULL,
+  `Lname` VARCHAR(45) NULL DEFAULT NULL,
+  `Sex` VARCHAR(45) NULL DEFAULT NULL,
+  `Age` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`DirectorID`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `moviek`.`genre`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `moviek`.`genre` (
+  `GName` VARCHAR(45) NOT NULL,
+  `genre` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`GName`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `moviek`.`rating`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `moviek`.`rating` (
+  `RateNo` DECIMAL(2) NOT NULL,
+  `Rating` INT NULL DEFAULT NULL,
+  `RateLetter` VARCHAR(45) NULL DEFAULT NULL,
+  `MovieID` INT NULL DEFAULT NULL,
+  PRIMARY KEY (`RateNo`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `moviek`.`movie`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `moviek`.`movie` (
+  `MovieID` INT NOT NULL,
+  `Title` VARCHAR(45) NULL DEFAULT NULL,
+  `Length` INT NULL DEFAULT NULL,
+  `ReleaseDate` VARCHAR(45) NULL DEFAULT NULL,
+  `DirectorID` INT NULL,
+  `GName` VARCHAR(45) NULL,
+  `RateNo` DECIMAL(2) NULL,
+  PRIMARY KEY (`MovieID`),
+  INDEX `DirectorID_idx` (`DirectorID` ASC) VISIBLE,
+  INDEX `Name_idx` (`GName` ASC) VISIBLE,
+  INDEX `RateNo_idx` (`RateNo` ASC) VISIBLE,
+  CONSTRAINT `DirectorID`
+    FOREIGN KEY (`DirectorID`)
+    REFERENCES `moviek`.`director` (`DirectorID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `Name`
+    FOREIGN KEY (`GName`)
+    REFERENCES `moviek`.`genre` (`GName`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `RateNo`
+    FOREIGN KEY (`RateNo`)
+    REFERENCES `moviek`.`rating` (`RateNo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `moviek`.`worksfor`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `moviek`.`worksfor` (
+  `MovieID` INT NULL,
+  `ActorID` INT NULL DEFAULT NULL,
+  INDEX `ActorID_idx` (`ActorID` ASC) VISIBLE,
+  INDEX `MovieID_idx` (`MovieID` ASC) VISIBLE,
+  CONSTRAINT `MovieID`
+    FOREIGN KEY (`MovieID`)
+    REFERENCES `moviek`.`movie` (`MovieID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `ActorID`
+    FOREIGN KEY (`ActorID`)
+    REFERENCES `moviek`.`actor` (`ActorID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
