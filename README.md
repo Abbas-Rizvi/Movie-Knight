@@ -15,13 +15,10 @@ Apply the data management principles that you learned during the course to a rea
  - Project presentation and final report (one for the team, with contribution from all members)
 
 ## Phase 1: Project Proposal
-1. [The Proposal](https://github.com/Abbas-Rizvi/Movie-Knight/blob/master/Proposal.pdf)
+* [The Proposal](https://github.com/Abbas-Rizvi/Movie-Knight/blob/master/Proposal.pdf)
 ## Phase 2: Project Design
-2. [The Project Design](https://github.com/Abbas-Rizvi/Movie-Knight/tree/master/Project%20Design)<br/>
-         i) [Design Diagrams](https://github.com/Abbas-Rizvi/Movie-Knight/tree/master/Project%20Design/Design%20Diagrams)<br/>
-              * [ER Diagram](https://github.com/Abbas-Rizvi/Movie-Knight/blob/master/Project%20Design/Design%20Diagrams/ER_Diagram.png)<br/>
-              * [Relationl Schema Diagram](https://github.com/Abbas-Rizvi/Movie-Knight/blob/master/Project%20Design/Design%20Diagrams/Relational_Schema.png)
-    ii) [Sample Data]
-    
-   iii) [System Views]
+* [The Project Design](https://github.com/Abbas-Rizvi/Movie-Knight/tree/master/Project%20Design)
+  i) [Design Diagrams](https://github.com/Abbas-Rizvi/Movie-Knight/tree/master/Project%20Design/Design%20Diagrams)
+     * [ER Diagram](https://github.com/Abbas-Rizvi/Movie-Knight/blob/master/Project%20Design/Design%20Diagrams/ER_Diagram.png)
+     * [Relationl Schema Diagram](https://github.com/Abbas-Rizvi/Movie-Knight/blob/master/Project%20Design/Design%20Diagrams/Relational_Schema.png)
 ## Phase 3: Project Final Report
