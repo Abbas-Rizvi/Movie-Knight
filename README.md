@@ -15,5 +15,6 @@ Apply the data management principles that you learned during the course to a rea
  - Project presentation and final report (one for the team, with contribution from all members)
 
 ## Phase 1: Project Proposal
+* [The Proposal](https://github.com/Abbas-Rizvi/Movie-Knight/blob/master/Proposal.pdf)
 ## Phase 2: Project Design
 ## Phase 3: Project Final Report
