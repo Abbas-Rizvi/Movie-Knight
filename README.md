@@ -21,4 +21,7 @@ Apply the data management principles that you learned during the course to a rea
   * [Design Diagrams](https://github.com/Abbas-Rizvi/Movie-Knight/tree/master/Project%20Design/Design%20Diagrams)
      * [ER Diagram](https://github.com/Abbas-Rizvi/Movie-Knight/blob/master/Project%20Design/Design%20Diagrams/ER_Diagram.png)
      * [Relationl Schema Diagram](https://github.com/Abbas-Rizvi/Movie-Knight/blob/master/Project%20Design/Design%20Diagrams/Relational_Schema.png)
+  * Sample Data
+ 
+  * System Views
 ## Phase 3: Project Final Report
