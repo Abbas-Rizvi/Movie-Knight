@@ -13,3 +13,7 @@ Apply the data management principles that you learned during the course to a rea
 ## Deliverables
  - Project report per phase (one for the team) 
  - Project presentation and final report (one for the team, with contribution from all members)
+
+## Phase 1: Project Proposal
+## Phase 2: Project Design
+## Phase 3: Project Final Report
