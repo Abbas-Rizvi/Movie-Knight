@@ -17,7 +17,7 @@ Apply the data management principles that you learned during the course to a rea
 ## Phase 1: Project Proposal
 1. [The Proposal](https://github.com/Abbas-Rizvi/Movie-Knight/blob/master/Proposal.pdf)
 ## Phase 2: Project Design
-2. [The Project Design](https://github.com/Abbas-Rizvi/Movie-Knight/tree/master/Project%20Design)
+2. [The Project Design](https://github.com/Abbas-Rizvi/Movie-Knight/tree/master/Project%20Design)<br/>
          i) [Design Diagrams](https://github.com/Abbas-Rizvi/Movie-Knight/tree/master/Project%20Design/Design%20Diagrams)
               * [ER Diagram](https://github.com/Abbas-Rizvi/Movie-Knight/blob/master/Project%20Design/Design%20Diagrams/ER_Diagram.png)
               * [Relationl Schema Diagram](https://github.com/Abbas-Rizvi/Movie-Knight/blob/master/Project%20Design/Design%20Diagrams/Relational_Schema.png)
