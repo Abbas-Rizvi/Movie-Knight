@@ -1,4 +1,4 @@
-#Views
+# Views
 ## View 1
 Who are the main actors in our movies?
 ```
@@ -76,5 +76,18 @@ GROUP BY movie.Length;
 ```
 
 ## View 9
+What is an actor's rating for a film?
+```
+SELECT actorjobs.MovieID,actorjobs.Fname,actorjobs.Lname, rating.Rating 
+FROM actorjobs 
+INNER JOIN rating 
+ON rating.RateNo = actorjobs.MovieID;
+```
 
-
+## View 10
+What is the average rating of our movies?
+```
+SELECT AVG(Cast(Rating AS INTEGER)) 
+AS 'AverageRating' 
+FROM rating;
+```
