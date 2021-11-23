@@ -1,4 +1,4 @@
-# MovieKnight
+# GameKnight
 Data Management Final Project - Fall 2021
 ### Group 8 Members
 - Jad Eletry       - 100745226
